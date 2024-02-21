@@ -26,12 +26,6 @@ const sliderButtons = [
   { id: 6, label: "TYPE4", special: false },
 ];
 
-const ColorToggleButton = ({ mode, toggleMode, color, label }) => (
-  <button className={`bg-${color} text-white px-4 py-2 rounded`} onClick={() => toggleMode(color)}>
-    {label}
-  </button>
-);
-
 const App = () => {
   const [mode, setMode] = useState('dark'); 
 
@@ -44,8 +38,8 @@ const App = () => {
       <nav className="flex items-center justify-between bg-green-900">
         <div className="text-white mx-auto">Change Color</div>
         <div className="flex space-x-2">
-          <ColorToggleButton mode={mode} toggleMode={toggleMode} color="dark" label="Dark" />
-          <ColorToggleButton mode={mode} toggleMode={toggleMode} color="primary" label="Primary" />
+          <button className="bg-dark text-white px-4 py-2 rounded" onClick={() => toggleMode('dark')}>Dark</button>
+          <button className="bg-blue-600 text-white px-4 py-2 rounded" onClick={() => toggleMode('primary')}>Primary</button>
         </div>
       </nav>
       <SidebarToggleMenu />
