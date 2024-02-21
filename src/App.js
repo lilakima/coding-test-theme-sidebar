@@ -40,7 +40,7 @@ const App = () => {
         <div className="text-white mx-auto">Change Color</div>
         <div className="flex space-x-2">
           <ColorToggleButton mode="dark" toggleMode={toggleMode} color="dark" label="Dark" />
-          <ColorToggleButton mode="primary" toggleMode={toggleMode} color="blue-600" label="Primary" />
+          <ColorToggleButton mode="primary" toggleMode={toggleMode} color="primary" label="Primary" />
         </div>
       </nav>
       <SidebarToggleMenu />
