@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SidebarToggleMenu from './components/SidebarToggleMenu';
 import Slider from './components/Slider';
 import GridTable from './components/GridTable';
+import ColorToggleButton from './components/ColorToggleButton';
 import './App.css';
 
 const gridItems = [
@@ -38,8 +39,8 @@ const App = () => {
       <nav className="flex items-center justify-between bg-green-900">
         <div className="text-white mx-auto">Change Color</div>
         <div className="flex space-x-2">
-          <button className="bg-dark text-white px-4 py-2 rounded" onClick={() => toggleMode('dark')}>Dark</button>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded" onClick={() => toggleMode('primary')}>Primary</button>
+          <ColorToggleButton mode="dark" toggleMode={toggleMode} color="dark" label="Dark" />
+          <ColorToggleButton mode="primary" toggleMode={toggleMode} color="blue-600" label="Primary" />
         </div>
       </nav>
       <SidebarToggleMenu />
