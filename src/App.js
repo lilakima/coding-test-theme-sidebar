@@ -3,6 +3,7 @@ import SidebarToggleMenu from './components/SidebarToggleMenu';
 import Slider from './components/Slider';
 import GridTable from './components/GridTable';
 import ColorToggleButton from './components/ColorToggleButton';
+import { sliderButtons, gridItems } from './dummyData';
 import './App.css';
 
 const gridItems = [
